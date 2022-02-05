@@ -1,1 +1,7 @@
-<p>home works!</p>
+<div class="container">
+  <div class="row">
+    <div *ngFor="let item of items$ | async" class="col">
+      <app-gallery-card [item]="item"></app-gallery-card>
+    </div>
+  </div>
+</div>

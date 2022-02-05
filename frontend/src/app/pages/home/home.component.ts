@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { GalleryService } from '../gallery/services/gallery.services';
 
 @Component({
   selector: 'app-home',
@@ -6,10 +7,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
-
-  constructor() { }
+  public items$ = this.gallerySvc.items$;
+  constructor(private readonly gallerySvc: GalleryService) { }
 
   ngOnInit(): void {
   }
+
+
 
 }
